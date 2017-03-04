@@ -44,8 +44,7 @@ limitations under the License.
       window.onload = function() {
         document.getElementById('cat').src = 'http://cataas.com/cat';
         setInterval(function() {
-            document.getElementById('cat').src = '';
-            document.getElementById('cat').src = 'http://cataas.com/cat';
+            document.getElementById('cat').src = 'http://cataas.com/cat' + new Date().getTime();;
         }, 10000);
         cast.receiver.logger.setLevelValue(0);
         window.castReceiverManager = cast.receiver.CastReceiverManager.getInstance();
